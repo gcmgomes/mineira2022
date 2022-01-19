@@ -1,0 +1,12 @@
+Para determinar se uma parede P é visível ou não pela câmera C, basta saber se os dois pontos extremos dela (P1 e P2) não estão obstruídos por outra parede Q.
+
+Para determinar se P1 é visível, podemos traça um segmento de reta entre C e P1 e verificar se alguma parede Q cruza o segmento (C, P1).
+Repetir o processo para P2.
+Esse passo determina se a parede P é visível e pode ser feito em O(N).
+
+Para verificar todas as paredes, basta repetir o processo.
+
+A complexidade final fica em $O(N^2)$.
+
+
+A principal dificuldade da solução é conhecer o algoritmo de interseptação de segmentos e saber como usá-lo.

@@ -1,0 +1,32 @@
+Uma empresa de segurança foi contratada para instalar câmeras de segurança em um museu. Cada sala do museu deve conter uma câmera e é necessário que todas as paredes desta sala sejam visíveis pela câmera. O operador da câmera pode rotacioná-la livremente.
+
+Uma parede é considerada vigiada pela câmera se todos os possíveis pontos sobre ela podem ser vistos pela câmera.
+
+Neste momento, a empresa de segurança já definiu a posição da câmera para cada sala e precisa de sua ajuda para decidir se todas as paredes estão sendo monitoradas.
+
+
+\section*{Entrada}
+
+A entrada é composta pela descrição da sala do museu e da posição da câmera.
+A primeira linha contêm um inteiro $N$, que representa a quantidade de pontos extremos que compôem as paredes da sala.
+Em seguida, teremos $N$ linhas. A $i$-ésima linha contêm 2 inteiros $X[i], Y[i]$, as coordenadas do $i$-ésimo ponto.
+Uma parede é formada pelo ponto $i$ e o ponto $i+1$. O último ponto da entrada com o primeiro ponto formam a última parede.
+Por fim, temos mais uma linha com dois inteiros $A, B$, com as coordenadas da câmera.
+
+\section*{Saída}
+
+A primeira linha da saída deve conter um único inteiro $M$, a quantidade de paredes que não podem ser vistas pela câmera. Em seguida, devem se seguir $M$ linhas. A $i$-ésima deve ter quatro inteiros $X[i], Y[i], X[i+1], Y[i+1]$, representando as coordenadas dos pontos extremos da $i$-ésima parede que não é vista pela câmera.
+
+\section*{Restrições}
+
+\begin{itemize}
+\item $3 \leq N \leq 1000$
+\item $-1000 \leq X[i], Y[i], A, B\leq 1000$
+\end{itemize}
+
+É garantido que as coordenadas válidas geram um polígono e que as coordenadas da câmera se encontram dentro desse polígono.
+
+
+\section*{Exemplos}
+
+\exemplo

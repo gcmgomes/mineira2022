@@ -1,0 +1,28 @@
+O drawdown relativo máximo de uma sequência de valores positivos de uma ação $Y[1], \dots, Y[M]$ é o maior valor de $(Y[i] - Y[j])/Y[i]$ com $1 \leq i \leq j \leq N$.
+
+Dado uma sequência de $N$ valores positivos de uma ação $X[1], X[2], \dots, X[N]$ e $Q$ consultas $(L[1], R[1]), \dots, (L[Q], R[Q])$, calcule o drawdown relativo máximo de cada intervalo $X[[L[i]], ...., X[R[i]]$ para $i = 1, \dots, Q$.
+
+\section*{Entrada}
+
+A primeira linha da entrada deve conter dois inteiros separados por espaço $N$ e $Q$, descrevendo o tamanho da sequência $X$ e o número de intervalos sobre os quais o drawdown relativo máximo deve ser calculado.
+
+A segunda linha da entrada contém N inteiros separados por espaço $X[1], \dots, X[N]$, representando os valores da ação.
+
+A $i$-ésima das $Q$ linhas seguintes contém dois inteiros  separados por espaço, $L[i] e R[i]$, representando um intervalo sobre o qual o drawdown relativo máximo deve ser calculado.
+
+\section*{Saída}
+
+Devem ser impressas $Q$ linhas, sendo que a $i$-ésima delas deve conter dois inteiros  separados por espaço, $A[i]$ e $B[i]$, onde $A[i] \geq 0$, $B[i] \geq 1$, $gcd(A[i], B[i]) = 1$ e $A[i] / B[i]$ representa o drawdown relativo máximo de $X[L[i]], ..., X[R[i]]$.
+
+\section*{Restrições}
+
+\begin{itemize}
+\item $1 \leq N \leq 2 \cdot 10^5$
+\item $1 \leq Q \leq 2 \cdot 10^5$
+\item $1 \leq X[i] \leq 10^9$
+\end{itemize}
+
+
+\section*{Exemplos}
+
+\exemplo
