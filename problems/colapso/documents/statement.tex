@@ -1,0 +1,33 @@
+Bibika trabalha no centro nacional de meteorologia onde sua função é estudar dados passados referentes a períodos chuvosos em diversas cidades do país a fim de entender as consequências que cidades em estados de emergências causam para o crescimento do país.
+
+Para fins didáticos, iremos considerar que um país é sempre retangular de tamanho $N$x$M$ onde cada posição desse retângulo representa uma cidade. Após anos de estudos, Bibika está quase certa de que um país entra em colapso, por conta dos problemas em longos períodos de chuva, sempre que todas as cidades contidas em um quadrado de tamanho $K$ declaram estado de emergência.
+
+Querendo confirmar sua teoria, Bibika conta com sua ajuda para analisar mais alguns períodos chuvosos da história e descobrir qual foi o primeiro momento em que o país entrou em colapso, dada a definição de colapso descrita anteriormente.
+
+É válido destacar que uma cidade nunca entra em estado de emergência mais de uma vez e, como os dados de quando elas saíram do estado de emergência foram perdidos, consideraremos que ela permanecerá em estado de emergência para sempre.
+
+\section*{Entrada}
+
+A primeira linha contém da entrada contém quatro inteiros $N$, $M$, $K$, $Q$, representando, respectivamente, a quantidade de linhas e colunas representando o país, o tamanho do lado do quadrado e a quantidade de dados de cidades que declararam estado emergência.
+Cada uma das próximas $Q$ linhas contém três inteiros $A$, $B$, $D$ significando que no momento $D$ no tempo a cidade da posição $A$x$B$ declarou estado de emergência. 
+
+\section*{Saída}
+
+Exiba um único inteiro, o primeiro momento em que seria possível dizer que o país entrou em colapso. 
+Caso ele não tenha entrado em colapso em nenhum momento, exiba $-1$.
+
+\section*{Restrições}
+
+\begin{itemize}
+\item $1 \leq N, M \leq 400$
+\item $1 \leq K \leq min(N, M)$
+\item $1 \leq Q \leq N*M$
+\item $1 \leq A \leq N$
+\item $1 \leq B \leq M$
+\item $1 \leq D \leq 10^9$
+\end{itemize}
+
+
+\section*{Exemplos}
+
+\exemplo
