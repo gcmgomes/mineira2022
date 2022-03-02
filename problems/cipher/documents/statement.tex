@@ -1,34 +1,61 @@
 A cifra de transposição Rail Fence é um clássico algoritmo de criptografia. A ideia é cifrar uma mensagem escrevendo cada caracter diagonalmente para baixo e para cima em sucessivos trilhos de uma cerca imaginária. Um verdadeiro zig-zag! Depois, basta obter a sequência horizontal de caracteres, da esquerda para a direita, de cima para baixo, para formar a mensagem cifrada, sempre ignorando espaços e pontuação.
-Por exemplo, para encriptar a mensagem: “QUEM TE CONHECE NAO ESQUECE JAMAIS” em 3 trilhos, escreva o texto como:
+Por exemplo, para encriptar a mensagem: \texttt{“QUEM TE CONHECE NAO ESQUECE JAMAIS”} em 3 trilhos, escreva o texto como:
 
-Q . . . T . . . N . . . E . . . E . . . E . . . A . . . S 
-. U . M . E . O . H . C . N . O . S . U . C . J . M . I . 
-. . E . . . C . . . E . . . A . . . Q . . . E . . . A . . 
+%\begin{center}
+%\small
+%\begin{verb} 
+%Q . . . T . . . N . . . E . . . E . . . E . . . A . . . S
+%\end{verb} 
+%\begin{verb}
+%. U . M . E . O . H . C . N . O . S . U . C . J . M . I . 
+%\end{verb} 
+%\begin{verb}
+%. . E . . . C . . . E . . . A . . . Q . . . E . . . A . . 
+%\end{verb}
+%\end{center}
 
 
+
+\begin{center}
+\small
+\begin{verb} 
+Q  .  .  .  T  .  .  .  N  .  .  .  E  .  .  .  E  .  .  .  E  .  .  .  A  .  .  .  S
+\end{verb} 
+\begin{verb}
+.  U  .  M  .  E  .  O  .  H  .  C  .  N  .  O  .  S  .  U  .  C  .  J  .  M  .  I  . 
+\end{verb} 
+\begin{verb}
+.  .  E  .  .  .  C  .  .  .  E  .  .  .  A  .  .  .  Q  .  .  .  E  .  .  .  A  .  . 
+\end{verb}
+\end{center}
+
+
+\normalsize
 Então, leia o texto horizontalmente, da esquerda para direita, de cima para baixo, ignorando espaços e pontuação. O resultado é o seguinte texto cifrado:
 
+\begin{verbatim}
 QTNEEEASUMEOHCNOSUCJMIECEAQEA
+\end{verbatim}
 
-Missão:
-Escreva uma solução para obter a mensagem original a partir da mensagem cifrada M e do número de trilhos N utilizados para codificá-la.
+Sua missão é escrever uma solução para obter a mensagem original, ignorando espaços e pontuação, a partir da mensagem cifrada $C$ e do número de trilhos $N$ utilizados para codificá-la.
 
 \section*{Entrada}
 
-A primeira linha da entrada contém uma única string, $M$, a mensagem que deve ser decodificada. A segunda linha da entrada contém um único inteiro $T$, o número de trilhos que evem ser usados para decodificar a mensagem.
+A primeira linha da entrada contém uma única string, $C$, que representa a mensagem que deve ser decodificada. 
+A segunda linha da entrada contém um único inteiro, $N$, que é o número de trilhos que devem ser usados para decodificar a mensagem.
 
 \section*{Saída}
 
-A saída deve conter uma única string $P$, representando a mensagem decodificada.
+A saída deve conter uma única string $M$, representando a mensagem decodificada.
 
 \section*{Restrições}
 
 \begin{itemize}
-\item $1 \leq |M| \leq 2000$
-\item $1 \leq |T| \leq |M|$
+\item $1 \leq |C| \leq 2000$
+\item $1 \leq N \leq |C|$
 \end{itemize}
 
-É garantido que $M$ contém apenas letras.
+É garantido que $C$ contém apenas letras.
 
 \section*{Exemplos}
 
