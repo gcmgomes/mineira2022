@@ -2,14 +2,16 @@
 
 # Sample test generator
 
-import sys,os,string
+import sys,os,string,random
 from random import seed, randint, sample
 
 # first argument must be seed
 seed(sys.argv[1])
-max_n = int(sys.argv[3])
-max_k = int(sys.argv[2])
+G=int(sys.argv[2])
+S=int(sys.argv[3])
 
-n = randint(1, max_n)
-k = randint(1, max_k)
-print("{} {}".format(n, k))
+if G == -1:
+    G = randint(1, 360)
+print G
+print(''.join(random.choice('DE') for _ in range(S)))
+

@@ -6,11 +6,43 @@ from random import seed, randint, sample
 # first argument is always seed
 seed(sys.argv[1])
 T=int(sys.argv[2])
-c = [0]*5
-for i in xrange(5):
-    c[i] = int(sys.argv[i+3])
 
-print T
-for i in xrange(4):
-    print c[i],
-print c[4]
+if T == 1:
+	print """360
+D"""
+
+if T == 2:
+	print """360
+E"""
+
+if T == 3:
+	print """180
+DE"""
+
+if T == 4:
+	print """90
+DDDEDEDEDEDEDEDEDEDEDEDEDEDEDEDEDEDEDED"""
+
+if T == 5:
+	print """359
+EDEDEDEDEDEDEDEDE"""
+
+if T == 6:
+	print """360
+ED"""
+
+if T == 7:
+    print 1
+    print(('E' * 359) + ('DE' * 49000))
+
+if T == 8:
+    print 1
+    print(('D' * 359) + ('ED' * 49000))
+
+if T == 9:
+    print 1
+    print(('E' * 359) + ('DE' * 49000) + 'E')
+    
+if T == 10:
+    print 1
+    print(('D' * 359) + ('ED' * 49000) + 'D')    
