@@ -60,6 +60,7 @@ int main()
         cin >> a[i][j];
 
   cin >> pn >> pm;
+  --pn; --pm;
   
   while(t--){
     pair<int, int> nextPosition = play(pn, pm);

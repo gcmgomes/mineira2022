@@ -4,26 +4,30 @@
 
 # Use samples as tests
 1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
 
-# Use generators
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
+# Fixeds
+2     ; gen_fixed.exe 1
+2     ; gen_fixed.exe 2
+2     ; gen_fixed.exe 3
+2     ; gen_fixed.exe 4
+2     ; gen_fixed.exe 5
+2     ; gen_fixed.exe 6
+2     ; gen_fixed.exe 7
+2     ; gen_fixed.exe 8
+2     ; gen_fixed.exe 9
+2     ; gen_fixed.exe 10
+
+# Use generator
+3     ; gen_random.exe 5 5
+3     ; gen_random.exe 4 7
+3     ; gen_random.exe 11 4
+3     ; gen_random.exe 40 30
+3     ; gen_random.exe 30 39
+3     ; gen_random.exe 50 1
+3     ; gen_random.exe 1 99
+3     ; gen_random.exe 123 789
+3     ; gen_random.exe 876 13
+3     ; gen_random.exe 996 999
+3     ; gen_random.exe 1000 999
+3     ; gen_random.exe 1000 1000
