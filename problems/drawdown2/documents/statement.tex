@@ -1,0 +1,67 @@
+Investir em ativos em bolsas de valores pode ser uma grande oportunidade para obter bons rendimentos, mas o risco também costuma ser alto.
+Por isso, muitos investidores analisam cuidadosamente o histórico de valores dos ativos antes de investir.
+Algumas das métricas mais utlizadas em tais análises são o \emph{drawdown} e o \emph{drawdown percentual}.
+
+Seja $P_1, P_2, \ldots, P_N$ a sequência de preços de um ativo em $N$ instantes de tempo.
+O \emph{drawdown} entre os intantes $i$ $(1 \leq i \leq N)$ e $j$ $(i \leq j \leq N)$ é a queda de preço do instante $i$ para o instante $j$ e
+pode ser calculado pela seguinte fórmula:
+\begin{equation*}
+    \operatorname{drawdown}\left(i, j\right) = \begin{cases}
+        P_i - P_j, \text{ se } P_j < P_i \\
+        0, \text{ caso contrário.}
+    \end{cases}
+\end{equation*}
+
+O \emph{drawdown percentual} entre dois instantes de tempo $i$ $(1 \leq i \leq N)$ e $j$ $(i \leq j \leq N)$ é a razão entre o \emph{drawdown} entre $i$ e $j$ e o preço do ativo no instance $i$. Isto é
+\begin{equation*}
+    \operatorname{drawdown\_percentual}\left(i, j\right) = \frac{\operatorname{drawdown}\left(i, j\right)}{P_i}. 
+\end{equation*}
+
+Por exemplo, considere um ativo com o seguinte histórico de preços:
+\begin{equation*}
+P_1 = 100, P_2 = 120, P_3 = 80, P_4 =  60, P_5 = 70.
+\end{equation*}
+O \emph{drawdown} e o \emph{drawdown percentual} entre os instances $2$ e $4$ são $60$ e $50\%$, respectivamente.
+
+O \emph{drawndown percentual} entre os instantes $i$ e $j$ diz aos investidores qual porcentagem do capital investido teria sido perdido caso
+o ativo tivesse sido comprado no instante $i$ e vendido no instante $j$. No exemplo acima, um investidor que tivesse comprado $10$ unidades do ativo no instante $2$ por um preço total de $1200$ e vendido no instance $4$ por um preço total de $600$, teria perdio $600$. Ou seja, teria perdido $50\%$ dos $1200$ investidos inicialmente.
+
+
+Uma forma de avaliar o risco de um ativo em um intervalo de tempo entre os instantes $a$ $(1 \leq a \leq N)$ e $b$ $(a \leq b \leq N)$ é calcular o maiores valores de \emph{drawdown} e \emph{drawdown percenutal} nesse intervalo de tempo. Mais precisamente, temos que:
+
+\begin{equation*}
+    \operatorname{max\_drawdown}\left(a, b\right) = \max\left\{\operatorname{drawdown}\left(i, j\right) : {a \leq i \leq j \leq b}\right\}
+\end{equation*}
+
+\begin{equation*}
+    \operatorname{max\_drawdown\_percentual}\left(a, b\right) = \max\left\{\operatorname{drawdown\_percentual}\left(i, j\right) : {a \leq i \leq j \leq b}\right\}
+\end{equation*}
+
+Dada a sequência de preços de um ativo e vários intervalos de tempo, calcule o \emph{drawdown máximo} e o \emph{drawdown percentual máximo}
+para cada intervalo.
+
+\section*{Entrada}
+
+A primeira linha da entrada contém um inteior $N$, que representa o número de instantes de tempo na sequência de preços.
+A segunda linha da entrada contém $N$ inteiros positivos $P_1, P_2, \ldots, P_N$, onde $P_i$ representa o preço do ativo no $i-$ésimo instance
+de tempo.
+A terceira linha da entrada contém um inteiro $Q$, representando o número de intervalos de tempo para os quais o \emph{drawdown máximo} e o
+\emph{drawdown percentual máixmo}  devem ser caluclados.
+A $i-$-ésima das $Q$ linhas seguintes contém dois interios $a_i$ e $b_i$ separados por espaço, representado o intervalo de tempo entre os instantes $a_i$ e $b_i$, inclusive. 
+\section*{Saída}
+
+A saída deve conter exatamente $Q$ linhas. A $i-$ésima linha da saída deve conter três inteiros não-negativos separados por espaço $D$, $R$ e $S$, onde $D$ e $\dfrac{R}{S}$ representam o \emph{drawdown máximo} e o \emph{drawdown percentual máximo} entre $a_i$ e $b_i$, respectivamente. Também é preciso garantir que o maior divisor comum entre $R$ e $S$ seja $1$. 
+
+\section*{Restrições}
+
+\begin{itemize}
+    \item $1 \leq N \leq 5\times{10}^5$.
+    \item $1 \leq P_i \leq {10}^9$ para todo $1 \leq i \leq N$.
+    \item $1 \leq Q \leq M \leq 5\times{10}^5$.
+    \item $1 \leq a_i \leq b_i \leq N$ para todo $1 \leq i \leq Q$.
+\end{itemize}
+
+
+\section*{Exemplos}
+
+\exemplo
