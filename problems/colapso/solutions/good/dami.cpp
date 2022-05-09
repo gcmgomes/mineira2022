@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -12,7 +12,7 @@ int getSquareSum(int i, int j){
     int esq = j-K, cima = i-K;
     if(esq >= 0) ret -= s[i][esq];
     if(cima >= 0) ret -= s[cima][j];
-    if(esq >= 0 && cima >= 0) ret += s[esq][cima];
+    if(esq >= 0 && cima >= 0) ret += s[cima][esq];
     return ret;
 }
 

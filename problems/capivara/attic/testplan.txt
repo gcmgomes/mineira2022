@@ -4,26 +4,77 @@
 
 # Use samples as tests
 1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
 
-# Use generators
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
+# Random grids
+# small feasible grid
+2     ; gen_random_grid.exe 10 10 100 1
+# small probably bad grid
+2     ; gen_random_grid.exe 10 10 100
+# medium feasible grid
+2     ; gen_random_grid.exe 100 200 20000 1
+# medium probably bad grid.
+2     ; gen_random_grid.exe 100 200 20000
+# big feasible grid.
+2     ; gen_random_grid.exe 3000 300 900000 1
+# big probably bad grid.
+2     ; gen_random_grid.exe 3000 300 900000
+# large feasible grid.
+2     ; gen_random_grid.exe 3000 4000 12000000 1
+# large probably bad grid.
+2     ; gen_random_grid.exe 3000 4000 12000000
+# huge feasible grid.
+2     ; gen_random_grid.exe 25000 2000 50000000 1
+# huge probably bad grid.
+2     ; gen_random_grid.exe 25000 2000 50000000
+# small grid with k too large.
+2     ; gen_random_grid.exe 20 20 30000 1
+# medium grid with k too small.
+2     ; gen_random_grid.exe 300 300 30000 1
+# large grid with k too large.
+2     ; gen_random_grid.exe 3000 2000 9000000 1
+# huge grid with k too small.
+2     ; gen_random_grid.exe 4000 4000 234567 1
+
+# Random paths
+# small bad path.
+3     ; gen_random_path.exe 10 5 False 1
+# small bad column.
+3     ; gen_random_path.exe 10 5 True 1
+# small feasible path.
+3     ; gen_random_path.exe 10 6 False 1
+# small feasible column.
+3     ; gen_random_path.exe 10 6 True 1
+# medium feasible path.
+3     ; gen_random_path.exe 1000 700 False 1
+# medium bad path.
+3     ; gen_random_path.exe 1000 700 False
+# big feasible path.
+3     ; gen_random_path.exe 10000 5001 False 1
+# big bad path.
+3     ; gen_random_path.exe 10000 5001 False
+# large feasible path.
+3     ; gen_random_path.exe 700000 398765 False 1
+# large bad path.
+3     ; gen_random_path.exe 700000 398765 False
+# huge feasible path.
+3     ; gen_random_path.exe 49999999 25000000 False 1
+# huge bad path.
+3     ; gen_random_path.exe 49999999 25000000 False
+
+# Boundary path cases
+# 2k - 1 large path.
+4     ; gen_random_path.exe 4999999 2500000 False 1
+# 2k - 1 big path.
+4     ; gen_random_path.exe 499999 250000 False 1
+# 2k - 1 big path 2.
+4     ; gen_random_path.exe 49999 25000 False 1
+# 2k - 1 medium path.
+4     ; gen_random_path.exe 4999 2500 False 1
+
+# Manual cases with large solution sizes.
+5     ; copy attic/manual-1403.in
+5     ; copy attic/manual-5.in
+5     ; copy attic/manual-75.in
+5     ; copy attic/manual-327491.in
+5     ; copy attic/manual-634398.in

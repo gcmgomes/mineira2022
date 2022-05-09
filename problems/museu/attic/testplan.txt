@@ -4,26 +4,73 @@
 
 # Use samples as tests
 1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+
+2     ; copy attic/manual/sala1_n_vis_1.in
+2     ; copy attic/manual/sala1_n_vis_2.in
+2     ; copy attic/manual/sala1_n_vis_colinear_1.in
+2     ; copy attic/manual/sala1_n_vis_colinear_2.in
+2     ; copy attic/manual/sala1_visivel_1.in
+2     ; copy attic/manual/sala1_visivel_2.in
+2     ; copy attic/manual/sala2_n_vis_1.in
 
 # Use generators
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
+3     ; gen_luciano.exe  10   50   convex
+3     ; gen_luciano.exe  10   50   convex
+3     ; gen_luciano.exe  10   50   convex
+3     ; gen_luciano.exe  10   50   convex
+3     ; gen_luciano.exe  100  500  convex
+3     ; gen_luciano.exe  100  500  convex
+3     ; gen_luciano.exe  100  500  convex
+3     ; gen_luciano.exe  100  500  convex
+
+4     ; gen_luciano.exe  20   50   concave
+4     ; gen_luciano.exe  20   50   concave
+4     ; gen_luciano.exe  20   50   concave
+4     ; gen_luciano.exe  20   50   concave
+4     ; gen_luciano.exe  100  500  concave
+4     ; gen_luciano.exe  100  500  concave
+4     ; gen_luciano.exe  100  500  concave
+4     ; gen_luciano.exe  100  500  concave
+
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  20    1000   convex
+5     ; gen_jngen.exe  1000  30000  convex
+5     ; gen_jngen.exe  1000  30000  convex
+5     ; gen_jngen.exe  1000  30000  convex
+5     ; gen_jngen.exe  1000  30000  convex
+
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  20    1000   concave
+6     ; gen_jngen.exe  1000  30000  concave
+6     ; gen_jngen.exe  1000  30000  concave
+6     ; gen_jngen.exe  1000  30000  concave
+6     ; gen_jngen.exe  1000  30000  concave

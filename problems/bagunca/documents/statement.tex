@@ -1,7 +1,7 @@
 Madalena é uma cachorrinha que adora fazer bagunça e andar em círculos. Sempre que seu dono, Dâmiko, chega em casa, encontra vários brinquedos espalhados pela casa e a cachorrinha Madalena girando e girando pelos cômodos.
 Dâmiko adora encontrar padrões e descobriu que os brinquedos não ficam espalhados de forma aleatória:
 - Um brinquedo fica sempre em cima de um único azulejo e Madalena brinca apenas com os brinquedos do azulejo que ela está no momento.
-- Quando Madalena começa a brincar pega os B brinquedos do azulejo e joga girando ao seu redor, sempre no sentido horário.
+- Quando Madalena começa a brincar pega os K brinquedos do azulejo e joga girando ao seu redor, sempre no sentido horário.
 Madalena tenta jogar o máximo de brinquedos possíveis para esses outros azulejos, mas sempre distribuindo de forma igual entre todos eles. Nesse caso, para não quebrar essas regras, se não for possível jogar algum brinquedo, este continua no azulejo atual.
 - Depois Madalena troca de azulejo para outro adjacente. Ela escolhe aquele que tem mais brinquedos (porque assim é muito mais divertido) e recomeça a girar e jogar. Se existe mais de um possível próximo azulejo com o mesmo número de brinquedos, ela escolhe o primeiro do sentido horário que encontrar, seguindo a mesma ordem em que joga os brinquedos:
 
@@ -10,14 +10,14 @@ Madalena tenta jogar o máximo de brinquedos possíveis para esses outros azulej
 |1(ᴥ)5|
 |8|7|6|
 
-- A brincadeira acaba depois que Madalena já percorreu N+M azulejos.
+- A brincadeira acaba depois que Madalena já percorreu L+C azulejos.
 
 Sabendo de tudo isso, Dâmiko quer tentar calcular quais os azulejos com o maior número de brinquedos no final da brincadeira, dado um azulejo inicial onde Madalena começa a brincar.
 
 \section*{Entrada}
 
-A entrada contém dois valores inteiros $N$ e $M$ que representam as quantidade de linhas e colunas de azulejo. Em seguida terá uma matriz de tamanho $N$x$M$ com elementos inteiros representando a quantidade de brinquedos naquele azulejo.
-Por fim, dois valores inteiros $L$ e $C$ que representam a linha e a coluna, respectivamente, onde Madalena iniciou sua brincadeira.
+A entrada contém dois valores inteiros $L$ e $C$ que representam as quantidade de linhas e colunas de azulejo. Em seguida terá uma matriz $M$ de tamanho $L$x$C$ com elementos inteiros representando a quantidade de brinquedos naquele azulejo.
+Por fim, dois valores inteiros $A$ e $B$ que representam a linha e a coluna, respectivamente, onde Madalena iniciou sua brincadeira.
 
 \section*{Saída}
 
@@ -27,9 +27,10 @@ A saída deve conter o maior número de brinquedos em um único azulejo.
 \section*{Restrições}
 
 \begin{itemize}
-\item $1 \leq N, M \leq 1000$
-\item $1 \leq L \leq N$
-\item $1 \leq C \leq M$
+\item $1 \leq L, C \leq 1000$
+\item $0 \leq Mij \leq 10^6$
+\item $1 \leq A \leq L$
+\item $1 \leq B \leq C$
 \end{itemize}
 
 

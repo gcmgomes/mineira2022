@@ -4,26 +4,39 @@
 
 # Use samples as tests
 1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+
+# N M K Q
+# N, M [1, 400]
+# K [1, min(N, M)]
+# Q [1, N*M]
+
+# Fixeds
+2     ; gen_fixed.exe 1
+2     ; gen_fixed.exe 2
+2     ; gen_fixed.exe 3
+2     ; gen_fixed.exe 4
+2     ; gen_fixed.exe 5
+2     ; gen_fixed.exe 6
+2     ; gen_fixed.exe 7
+2     ; gen_fixed.exe 8
 
 # Use generators
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
+3     ; gen_random.exe 10 5 3 40
+3     ; gen_random.exe 10 10 6 80
+3     ; gen_random.exe 5 5 2 15
+3     ; gen_random.exe 5 7 1 3
+3     ; gen_random.exe 10 10 8 65
+3     ; gen_random.exe 30 30 10 800
+3     ; gen_random.exe 30 35 11 900
+3     ; gen_random.exe 10 50 10 450
+3     ; gen_random.exe 100 150 28 1400
+
+3     ; gen_random.exe 400 400 50 150000
+3     ; gen_random.exe 400 400 90 120000
+3     ; gen_random.exe 400 400 200 100000
+3     ; gen_random.exe 399 398 9 123456
+3     ; gen_random.exe 400 400 2 54321
+3     ; gen_random.exe 397 399 100 100001
+3     ; gen_random.exe 400 400 90 100000
+3     ; gen_random.exe 400 400 200 100000
