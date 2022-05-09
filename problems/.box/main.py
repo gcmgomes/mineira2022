@@ -71,7 +71,7 @@ def build_binaries(directory):
         if src_fn.endswith('.c'):
             cmd_line = 'gcc -O2 -lm -std=c99 -o %s %s' % (exe_fn, src_fn)
         elif src_fn.endswith('.cpp'):
-            cmd_line = 'g++ -std=c++11 -O2 -o %s %s' % (exe_fn, src_fn)
+            cmd_line = 'g++ -std=c++17 -O2 -o %s %s' % (exe_fn, src_fn)
         elif src_fn.endswith('.pas'):
             cmd_line = 'fpc -O2 -Tlinux -o%s %s' % (exe_fn, src_fn)
         elif src_fn.endswith('.java'):
