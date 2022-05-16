@@ -17,6 +17,8 @@
 2     ; gen_fixed.exe 8
 2     ; gen_fixed.exe 9
 2     ; gen_fixed.exe 10
+2     ; gen_fixed.exe 11
+2     ; gen_fixed.exe 12
 
 # Use generator
 3     ; gen_random.exe 5 5

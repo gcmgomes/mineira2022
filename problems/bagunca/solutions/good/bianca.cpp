@@ -25,9 +25,10 @@ int getValidNeighbors(int x, int y){
 pair<int, int> play(int x, int y){
     
     int neighbors = getValidNeighbors(x, y);
+    if(neighbors==0) return {x, y};
     int toNeighbors = a[x][y]/neighbors;
     a[x][y] = a[x][y]%neighbors;
-    int maior = 0;
+    int maior = -1;
     pair<int, int> next;
     
     for(int i=0; i<8; i++){
