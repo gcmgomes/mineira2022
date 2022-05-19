@@ -4,6 +4,7 @@
 
 # Use samples as tests
 1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
 
 # random, small grid, simple grid
 2     ; gen_random.exe 100 100 0.1 10 10 
