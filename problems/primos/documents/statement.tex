@@ -1,0 +1,50 @@
+Um dos principais passatempos nas escolas da Bacônia moderna é o estudo da teoria dos números. O que poucos sabem é
+que toda essa popularidade se deve aos esforços de Bacon -- o Grafo -- de promover o conhecimento e o avanço
+científico durante seu reinado, principalmente na matemática e sua paixão pessoal, a combinatória.
+
+A mais nova febre entre as jovens capivaras é o Jogo do Gato, que rapidamente tem ocupado espaço na Bacônia devido a sua
+natureza competitiva.
+Seu crescimento tem sido tão rápido que já há uma maratona planejada para o próximo ano, que promete desafiar até as capivaras
+mais bem preparadas do reino. O jogo é disputado entre duas capivaras, e funciona em três fases.
+Na primeira fase, uma capivara é designada como a numeróloga e a outra como o gato.
+Na segunda fase, a numeróloga escolhe um número $N$ enquanto, ao mesmo tempo, o gato constroi uma lista $P$ de números primos.
+No início da terceira e última fase, as capivaras revelam suas escolhas e começa a disputa.
+Mas como ela funciona? O objetivo de cada capivara é encontrar uma forma de dividir $N$ em uma sequência de partes
+de tal forma que cada parte é divisível por pelo menos um elemento de $P$. Uma parte é uma sequência contígua de dígitos de $N$.
+Alguns minutos após o início da terceira fase, o juiz apita e as competidoras devem mostrar suas sequências, ou declarar que é impossível
+formar uma sequência.
+É declarada a vencedora do desafio a capivara que tiver a menor sequência em ordem lexicográfica; em caso de empate,
+inicia-se uma nova rodada a partir da primeira fase.
+
+Para tudo ficar mais claro, vamos a um exemplo com $N = 227$ e $P = \{2, 3, 7\}$. As três formas de partir $N$, ordenadas lexicograficamente,
+são $\{\{2,2,7\}, \{2,27\}, \{22,7\}\}$. Dessa forma, se uma capivara escolheu $\{2, 2, 7\}$ e a outra escolheu $\{2, 27\}$, a primeira é declarada
+a vencedora.
+
+Os juizes da competição estão cansados de ter de resolver os casos esdrúxulos dos comptetidores manualmente a cada rodada, e pediram para você
+escrever um programa que, dados $N$ e $P$, retorne a primeira sequência da ordem lexicográfica. No nosso exemplo, o seu programa deve retornar
+$\{2, 2, 7\}$.
+
+\section*{Entrada}
+
+A linha da entrada contem dois inteiros, $N$ e $K$, onde $K$ é o comprimento do conjunto de primos $P$.
+A segunda linha da entrada contém $K$ inteiros $p_1, \dots, p_K$, separados por espaços, que correspondem aos elementos de $P$.
+
+\section*{Saída}
+
+Caso seja impossível construir uma sequência, a única linha da saída deve conter o inteiro $-1$.
+Caso contrário, a primeira linha da saída deve conter um único inteiro $M$: o tamanho da primeira sequência da ordem lexicográfica.
+A segunda linha deve conter $M$ inteiros, separados por espaços, que correspondem às partes da sequência.
+ 
+
+\section*{Restrições}
+
+\begin{itemize}
+    \item $1 \leq N \leq 10^{1000} - 1$
+    \item $1 \leq K \leq 50$
+    \item $2 \leq p_i \leq 10^{6}$
+\end{itemize}
+
+
+\section*{Exemplos}
+
+\exemplo
