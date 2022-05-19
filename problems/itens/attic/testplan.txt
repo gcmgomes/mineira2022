@@ -5,8 +5,75 @@
 # Use samples as tests
 1     ; copy documents/sample-1.in
 
-# Use generators
-2     ; gen_random.exe 1 5
-2     ; gen_random.exe 5 10
-2     ; gen_random.exe 10 50
-2     ; gen_random.exe 50 100
+# random, small grid, simple grid
+2     ; gen_random.exe 100 100 0.1 10 10 
+2     ; gen_random.exe 100 100 0.2 10 10 
+2     ; gen_random.exe 100 100 0.3 10 10 
+2     ; gen_random.exe 100 100 0.4 10 10 
+2     ; gen_random.exe 100 100 0.5 10 10 
+2     ; gen_random.exe 100 100 0.6 10 10 
+2     ; gen_random.exe 100 100 0.7 10 10 
+2     ; gen_random.exe 100 100 0.8 10 10 
+2     ; gen_random.exe 100 100 0.9 10 10 
+2     ; gen_random.exe 100 100 1.0 10 10 
+
+# random, small grid, medium complexity grid
+3     ; gen_random.exe 100 100 0.1 100 100 
+3     ; gen_random.exe 100 100 0.2 100 100 
+3     ; gen_random.exe 100 100 0.3 100 100 
+3     ; gen_random.exe 100 100 0.4 100 100 
+3     ; gen_random.exe 100 100 0.5 100 100 
+3     ; gen_random.exe 100 100 0.6 100 100 
+3     ; gen_random.exe 100 100 0.7 100 100 
+3     ; gen_random.exe 100 100 0.8 100 100 
+3     ; gen_random.exe 100 100 0.9 100 100 
+3     ; gen_random.exe 100 100 1.0 100 100 
+
+# random, small grid, complex grid
+4     ; gen_random.exe 100 100 0.1 1000 1000 
+4     ; gen_random.exe 100 100 0.2 1000 1000 
+4     ; gen_random.exe 100 100 0.3 1000 1000 
+4     ; gen_random.exe 100 100 0.4 1000 1000 
+4     ; gen_random.exe 100 100 0.5 1000 1000 
+4     ; gen_random.exe 100 100 0.6 1000 1000 
+4     ; gen_random.exe 100 100 0.7 1000 1000 
+4     ; gen_random.exe 100 100 0.8 1000 1000 
+4     ; gen_random.exe 100 100 0.9 1000 1000 
+4     ; gen_random.exe 100 100 1.0 1000 1000 
+
+# random, big grid, simple grid
+5     ; gen_random.exe 1000 1000 0.1 100 100 
+5     ; gen_random.exe 1000 1000 0.2 100 100 
+5     ; gen_random.exe 1000 1000 0.3 100 100 
+5     ; gen_random.exe 1000 1000 0.4 100 100 
+5     ; gen_random.exe 1000 1000 0.5 100 100 
+5     ; gen_random.exe 1000 1000 0.6 100 100 
+5     ; gen_random.exe 1000 1000 0.7 100 100 
+5     ; gen_random.exe 1000 1000 0.8 100 100 
+5     ; gen_random.exe 1000 1000 0.9 100 100 
+5     ; gen_random.exe 1000 1000 1.0 100 100 
+
+# random, big grid, medium complexity grid
+6     ; gen_random.exe 1000 1000 0.1 10000 10000 
+6     ; gen_random.exe 1000 1000 0.2 10000 10000 
+6     ; gen_random.exe 1000 1000 0.3 10000 10000 
+6     ; gen_random.exe 1000 1000 0.4 10000 10000 
+6     ; gen_random.exe 1000 1000 0.5 10000 10000 
+6     ; gen_random.exe 1000 1000 0.6 10000 10000 
+6     ; gen_random.exe 1000 1000 0.7 10000 10000 
+6     ; gen_random.exe 1000 1000 0.8 10000 10000 
+6     ; gen_random.exe 1000 1000 0.9 10000 10000 
+6     ; gen_random.exe 1000 1000 1.0 10000 10000 
+
+# random, big grid, complex grid
+7     ; gen_random.exe 1000 1000 0.1 100000 100000 
+7     ; gen_random.exe 1000 1000 0.2 100000 100000 
+7     ; gen_random.exe 1000 1000 0.3 100000 100000 
+7     ; gen_random.exe 1000 1000 0.4 100000 100000 
+7     ; gen_random.exe 1000 1000 0.5 100000 100000 
+7     ; gen_random.exe 1000 1000 0.6 100000 100000 
+7     ; gen_random.exe 1000 1000 0.7 100000 100000 
+7     ; gen_random.exe 1000 1000 0.8 100000 100000 
+7     ; gen_random.exe 1000 1000 0.9 100000 100000 
+7     ; gen_random.exe 1000 1000 1.0 100000 100000 
+
