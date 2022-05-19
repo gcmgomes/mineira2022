@@ -16,7 +16,7 @@ int main() {
     std::cin >> row;
   }
 
-  std::vector<std::vector<int>> dist(n, std::vector<int>(m, n + m));
+  std::vector<std::vector<int>> dist(n, std::vector<int>(m, n * m));
   std::queue<std::pair<int, int>> q;
   dist[ci][cj] = 0;
   q.push({ci, cj});
@@ -46,7 +46,7 @@ int main() {
     for (int j = 0; j < m; j++) {
       if (g[i][j] == '.') {
         num_free++;
-        if (dist[i][j] <= t) {
+        if (dist[i][j] <= t && dist[i][j] < n * m) {
           num_reached++;
         }
       }
