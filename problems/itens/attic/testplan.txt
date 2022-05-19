@@ -77,3 +77,30 @@
 7     ; gen_random.exe 1000 1000 0.9 100000 100000 
 7     ; gen_random.exe 1000 1000 1.0 100000 100000 
 
+# random, degenrated to line or column
+8     ; gen_random.exe 1 10 0.3 2 2 
+8     ; gen_random.exe 1 100 0.3 2 2 
+8     ; gen_random.exe 1 1000 0.3 2 2 
+8     ; gen_random.exe 10 1 0.3 2 2 
+8     ; gen_random.exe 100 1 0.3 2 2 
+8     ; gen_random.exe 1000 1 0.3 2 2 
+
+# random, more free cells
+9     ; gen_random.exe 100 200 0.2 10 5 
+9     ; gen_random.exe 100 200 0.2 100 50 
+9     ; gen_random.exe 100 200 0.2 1000 500
+9     ; gen_random.exe 1000 500 0.2 100 50 
+9     ; gen_random.exe 1000 500 0.2 1000 500 
+9     ; gen_random.exe 1000 500 0.2 10000 5000
+9     ; gen_random.exe 1000 100 0.2 1 0
+
+# random, more occupied cells
+10     ; gen_random.exe 100 200 0.2 5 10 
+10     ; gen_random.exe 100 200 0.2 50 100 
+10     ; gen_random.exe 100 200 0.2 500 1000
+10     ; gen_random.exe 1000 500 0.2 50 100 
+10     ; gen_random.exe 1000 500 0.2 500 1000 
+10     ; gen_random.exe 1000 500 0.2 5000 10000
+10     ; gen_random.exe 1000 1000 0.2 1 1000
+
+
