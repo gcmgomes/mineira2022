@@ -11,20 +11,20 @@ onde a prova estiver sendo realizada. Para poderem ficar com o balão, um dos me
 que ele caia no chão. 
 
 Os organizadores da prova acharam a ideia muito interessante, e estão pensando em implementá-la nas próximas edições.
-Antes disso, precisam avaliar cuidadosamente todos os ricos e implicações. Por exemplo, algum competidor correndo desesperado
+Antes disso, precisam avaliar cuidadosamente todos os riscos e implicações. Por exemplo, algum competidor correndo desesperado
 para pegar um balão poderia tropeçar em um cabo de rede. Então, talvez seja melhor usar uma rede sem fio. Outra questão importante
 é o impacto na felicidade dos competidores. Os organizadores acreditam que felicidade dos competidores está ligada ao número de
 balões que eles levam pra casa. Por isso, resolveram fazer uma análise para determinar a probabilidade de um competidor conseguir
 pegar um balão.
 
-O salão da prova foi modelado como um grid $N \times M$. Cada célula pode estar vazia ou conter algum obstáculo como, por exemplo, uma mesa.
+O salão da prova foi modelado como um tabuleiro $N \times M$. Cada célula pode estar vazia ou conter algum obstáculo como, por exemplo, uma mesa.
 O balão é solto diretamente acima de uma célula vazia escolhida aleatoriamente com probabilidade uniforme, e leva $T$ segundos para cair. 
 O competidor se encontra na célula da linha $c_i$ e coluna $c_j$ e consegue se deslocar verticalmente ou horizontalmente para células vizinhas
 vazias. O competidor leva $1$ segundo para se mover de uma célula para outra. 
-Se o competidor chegar em uma célula ao mesmo tempo que balão cair, assuma que o competidor conseguiu pegar o balão.
-Assuma que, se existirem caminhos que permitam que o competidor pegue o balão, o competidor vai escolher um deles.
+Se o competidor chegar em uma célula ao mesmo tempo que o balão cair, ele consegue pegar o balão.
+Como os competidores são muito espertos, se existir mais de um caminho que permite que o competidor pegue o balão, ele vai escolher o menor deles.
 A organização quer saber qual é probabilidade de que o competidor consiga pegar o balão antes que ele caia. Como a
-organização estava muito ocupada climpando cabos de rede, enchendo balões e comprando salgados, resolveram pedir para que você calcule essa probabilidade, o que deixou Bob muito feliz pois agora ele ajudou a colocar um problema na prova.
+organização estava muito ocupada crimpando cabos de rede, enchendo balões e comprando salgados, resolveram pedir para que você calcule essa probabilidade, o que deixou Bob muito feliz pois agora ele ajudou a colocar um problema na prova.
 
 
 \section*{Entrada}
