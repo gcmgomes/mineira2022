@@ -8,37 +8,33 @@
 %   \includegraphics{\CWD/images/example.pdf}
 % \end{figure}
 
-Benedita é uma jovem muito criativa e interessada em ciência. Desde criança, ela aprendeu que o conhecimento racional
-que a humanidade adquiriu ao longo da história permitiu com que a qualidade de vida melhorasse,
-e que descobertas ainda maiores fossem feitas.
+Maria Joaquina, ou pela alcunha Majô, é uma jovem muito criativa e interessada em ciência. Desde criança, ela aprendeu que o conhecimento racional que a humanidade adquiriu ao longo da história permitiu com que a qualidade de vida melhorasse, e que descobertas ainda maiores fossem feitas. “Coitado dos negacionistas!”, sempre diz ela.
 
-Um dos feitos mais inspiradores par Benedita foi a expedição à Lua de 1969, resultado da cooperação
-de engenheiros e cientistas de várias áreas do conhecimento. Após muito trabalho, o foguete Apollo 11 levou astronautas
-de uma base na Terra por uma viagem de vários dias, com partes muito críticas, como a decolagem, a aproximação e pousos lunares,
-a operação do módulo lunar, e a reentrada na atmosfera terrestre.
+Um dos feitos mais inspiradores para Benedita foi a expedição à Lua de 1969, resultado da cooperação de matemáticos, engenheiros e cientistas de várias áreas do conhecimento. Após muito trabalho, o foguete Apollo 11 da NASA levou astronautas de uma base na Terra por uma viagem de 8 dias, com partes muito críticas, como a decolagem, a aproximação e pousos lunares, a operação do módulo lunar, e a reentrada na atmosfera terrestre.
 
-Nessa viagem, os astronautas deixaram um arranjo de espelhos no solo lunar, capaz de refletir raios laser emitidos a partir da terra.
-Quando soube disso, Benedita imediatamente começou a montar o equipamente apropriado em seu quintal e chamou todos os seus vizinhos
-para acompanharem o experimento.
-Para sua surpresa, ela descobriu que vários deles não acreditam na chegada da humanidade à Lua, e vão só causar transtornos
-em sua festa laser.
-Para evitar a fadiga, Benedita pediu que você escreva um programa que diz se uma pessoa deve ser cortada do evento.
-Ela tem uma lista de vizinhos, composta apenas por zeros e uns.
-Uma linha tem a entrada $0$ se o vizinho não acredita no pouso lunar; caso contrário a linha tem uma entrada $1$.
-Dada uma única linha da lista, diga se o vizinho deve ou não ser cortado do conjunto de convidados!
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.2\textwidth]{\CWD/lua.png}
+\end{figure}
+
+Nessa viagem, os astronautas Michael Collins, Buzz Aldrin e Neil Armstrong  deixaram um arranjo de espelhos no solo lunar, capaz de refletir raios lasers emitidos a partir do planeta Terra. Quando soube disso, Majô imediatamente começou a montar o equipamento apropriado em seu quintal e chamou todos os seus vizinhos para acompanharem o experimento durante a festa que ela titulou ``AFE – Avoid Flat Earthers''.
+
+Além de conversar sobre astronomia, Majô, amante do estoicismo, também conversará com os convidados sobre outros avanços da humanidade, como o pensamento filosófico, o método científico e as vacinas. Entretanto, para sua surpresa, ela descobriu que vários vizinhos não acreditam na chegada da humanidade à Lua ou em algum avanço da ciência, e vão só causar transtornos em sua festa laser.
+
+Para evitar a fadiga, a jovem Joaquina pediu que você escreva um programa que indica se uma pessoa deve ser cortada do evento, por ser negacionista (``Óbvio, né gente!'', como diz Majô). Neste programa, o vizinho deve informar se ele é negacionista ou não. Se for um pessoa sensata, com certeza será convidado.
 
 \section*{Entrada}
 
-A entrada possui uma linha contendo um valor inteiro $V$, a entrada na lista de Benedita.
+A entrada possui uma linha contendo um valor inteiro $V$, que vale $1$, quando o vizinho analisado é negacionista, e $0$ caso contrário.
 
 \section*{Saída}
 
-A saída deve possuir um único inteiro $A$, que deve ser $1$ se o vizinho deve ser bloquado e $0$ se o vizinho deve ser liberado.
+A saída possui uma linha com um valor inteiro $A$, que vale $1$ quando o vizinho deve ser convidado por Majô para a festa AFE, de acordo com o critério que ela adota, e $0$ caso contrário.
 
 \section*{Restrições}
 
 \begin{itemize}
-	\item $0 \leq V \leq 1$
+	\item $1 \leq V \leq 0$
 \end{itemize}
 
 
