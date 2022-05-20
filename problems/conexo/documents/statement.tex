@@ -1,0 +1,49 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{figure}
+%   \centering
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{figure}
+
+Pedro é professor de uma instituição que nunca participou de competições de algoritmos e programação. Ao tomar conhecimento deste tipo de competição, ele percebeu uma oportunidade incrível para incentivar o aprendizado de seus estudantes. Assim, ele começou as atividades de divulgação e recrutamento para atrair estudantes para a próxima Maratona Mineira.
+
+Ele notou que em várias destas competições as equipes são formadas por equipes de três competidores. Como sua instituição ainda não tem uma tradição na competição, o número de alunos interessados em participar dos treinamentos foi pequeno. Por conta disso, ele resolveu criar equipes de dois competidores, para que o número de equipes fosse maior e, com isso, pudesse desenvolver uma competitividade maior entre seus estudantes.
+
+Pedro notou que alguns de seus estudantes não se sentiam confortáveis em formar duplas com quaisquer outros estudantes. Por conta disso, ele pediu para cada estudante elaborar uma lista de potenciais parceiros, isto é, uma lista de estudantes com os quais eles gostariam de formar duplas. Ele notou que havia uma certa simetria nestas listas: se um determinado estudante estivesse disposto a formar uma dupla com um outro, então a recíproca era verdadeira, isto é, o segundo também estava disposto a formar uma dupla com o primeiro.
+
+Naturalmente, nem sempre é possível formar duplas com todos os alunos satisfazendo tais listas, então Pedro decidiu analisá-las de modo a determinar qual seria o maior número de duplas que poderia ser formado. Infelizmente, ele sabia que os alunos que estivessem em duplas que não gostasse ou que não pertencessem a alguma dupla acabariam desmotivados e desistiriam dos treinamentos, assim, ele formou apenas duplas entre potenciais parceiros.
+
+Uma outra observação de Pedro é que alunos que possuem potenciais parceiros em outras duplas acabam interagindo com eles após as competições. Isto é bem interessante, porque, além de trocar conhecimento com seu colega de equipe, estudantes de diferentes duplas trocam experiências entre si. Assim, o conhecimento acaba se disseminando entre as diversas duplas e todos evoluem juntos. Mas, por conta da natureza das das relações de potenciais parceiros, Pedro notou que nem sempre o conhecimento alcançava todos os estudantes.
+
+Pedro deseja selecionar um conjunto de duplas que ele entenda como sendo o mais promissor. Para isso, ele deseja selecionar o maior número possível de duplas de forma que (a) se dois estudantes formam uma dupla, eles se consideram potenciais parceiros e que (b) seja possível que o conhecimento possa ser passado entre quaisquer duas duplas, direta ou indiretamente. Como Pedro ainda não está familiarizado com todos os algoritmos de programação competitiva, ele pediu sua ajuda para determinar quais duplas formar.
+
+
+
+
+
+\section*{Entrada}
+
+A primeira linha da entrada um inteiro $N$, correspondente ao número de estudantes que se interessaram pelas competições. Em seguida, serão fornecidas $N$ linhas, onde a $i$-ésima destas linhas conterá um inteiro $N_i$, o número de potenciais parceiros do i-ésimo estudante, seguido de $N_i$ inteiros, $p_{i1}, \ldots, p_{iN_i}$, separados por espaço, contendo os potenciais parceiros do $i$-ésimo estudante.
+
+
+\section*{Saída}
+
+A primeira linha da saída deverá conter um inteiro $M$, correspondente ao número máximo de duplas que podem ser formadas satisfazendo as restrições impostas por Pedro. Cada uma das $M$ linhas seguintes conterá um par de inteiros $A$ e $B$, indicando que os alunos $A$ e $B$ formarão uma dupla. 
+
+Caso haja mais de uma solução, qualquer uma delas pode ser impressa. As duplas podem ser impressas em qualquer ordem. 
+
+\section*{Restrições}
+
+\begin{itemize}
+    \item $2 \leq N \leq 10^{3}$
+    \item $0 \leq N_i \leq N-1$
+    \item $1 \leq p_{ij} \leq N$ e $p_{ij} \neq i$
+\end{itemize}
+
+
+\section*{Exemplos}
+
+\exemplo
