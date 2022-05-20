@@ -1,0 +1,52 @@
+Alice e Bob resolveram dar um tempo da criptografia.
+Enquanto estavam aproveitando as merecidas férias em uma das belas cachoeiras de Minas Gerais, eles
+conheceram um ex-competidor da Maratona Mineira de Programação, que explicou em detalhes como a competição funcionava.
+Infelizmente, Alice e Bob não são mais elegíveis para competir. Porém, eles queriam muito participar de alguma forma.
+
+Bob pensou em propor problemas para a prova, mas Alice rapidamente percebeu que não seria uma boa ideia pois os competidores
+saberiam que se trataria de um problema de criptografia assim que vissem os nomes dos autores. Então, sugeriram uma forma
+de deixar a competição ainda mais interessante. Toda vez que algum time resolver um problema, o time vai receber uma notificação
+no computador e, alguns segundos depois, o balão do problema amarrado a um peso será solto do alto em algum ponto do teto do salão
+onde a prova estiver sendo realizada. Para poderem ficar com o balão, um dos membros do time tem que conseguir pegar o balão antes
+que ele caia no chão. 
+
+Os organizadores da prova acharam a ideia muito interessante, e estão pensando em implementá-la nas próximas edições.
+Antes disso, precisam avaliar cuidadosamente todos os riscos e implicações. Por exemplo, algum competidor correndo desesperado
+para pegar um balão poderia tropeçar em um cabo de rede. Então, talvez seja melhor usar uma rede sem fio. Outra questão importante
+é o impacto na felicidade dos competidores. Os organizadores acreditam que felicidade dos competidores está ligada ao número de
+balões que eles levam pra casa. Por isso, resolveram fazer uma análise para determinar a probabilidade de um competidor conseguir
+pegar um balão.
+
+O salão da prova foi modelado como um tabuleiro $N \times M$. Cada célula pode estar vazia ou conter algum obstáculo como, por exemplo, uma mesa.
+O balão é solto diretamente acima de uma célula vazia escolhida aleatoriamente com probabilidade uniforme, e leva $T$ segundos para cair. 
+O competidor se encontra na célula da linha $c_i$ e coluna $c_j$ e consegue se deslocar verticalmente ou horizontalmente para células vizinhas
+vazias. O competidor leva $1$ segundo para se mover de uma célula para outra. 
+Se o competidor chegar em uma célula ao mesmo tempo que o balão cair, ele consegue pegar o balão.
+Como os competidores são muito espertos, se existir mais de um caminho que permite que o competidor pegue o balão, ele vai escolher o menor deles.
+A organização quer saber qual é probabilidade de que o competidor consiga pegar o balão antes que ele caia. Como a
+organização estava muito ocupada crimpando cabos de rede, enchendo balões e comprando salgados, resolveram pedir para que você calcule essa probabilidade, o que deixou Bob muito feliz pois agora ele ajudou a colocar um problema na prova.
+
+
+\section*{Entrada}
+
+A primeira linha da entrada contém cinco inteiros separados por espaço $N$, $M$, $T$, $c_i$ e $c_j$, onde $N$ e $M$ representam respectivamente o
+número de linhas e colunas do grid, $T$ representa o tempo em segundos que o balão leva para cair, e $c_i$ e $c_j$ representam respectivamente a linha e a coluna do grid da célula onde o competidor se
+encontra. Cada uma das $N$ linhas seguintes contém $M$ caracteres representando a $i$-ésima linha do grid. O $j$-ésimo caractere da $i$-ésima dessas linhas representa a célula do grid na linha $i$ e coluna $j$.
+O caractere '.' é usado para representar uma célula vazia e o caractere '\#' para representar uma célula ocupada.
+
+\section*{Saída}
+A saída deve conter um única linha com dois inteiros $A$ e $B$ separados por espaço, de forma que $\dfrac{A}{B}$ represente a probabilidade desejada, $B > 0$ e o maior fator comum entre $A$ e $B$ seja $1$.
+\section*{Restrições}
+
+\begin{itemize}
+    \item $1 \leq N \leq 1000$.
+    \item $1 \leq M \leq 1000$.
+    \item $1 \leq T \leq {10}^6$.
+    \item $1 \leq c_i \leq N$.
+    \item $1 \leq c_j \leq M$.
+\end{itemize}
+
+
+\section*{Exemplos}
+
+\exemplo

@@ -1,9 +1,9 @@
-Investir em ativos em bolsas de valores pode ser uma grande oportunidade para obter bons rendimentos, mas o risco também costuma ser alto.
-Por isso, muitos investidores analisam cuidadosamente o histórico de valores dos ativos antes de investir.
-Algumas das métricas mais utlizadas em tais análises são o \emph{drawdown} e o \emph{drawdown percentual}.
+Investir na bolsa de valores pode ser uma grande oportunidade para obter bons rendimentos. Um tipo importante de investidor que vem ganhando cada vez mais destaque nos últimos anos são os chamados fundos quantitativos ou sistemáticos, como a Alphabot. Nesses fundos,  os investimentos são realizados de forma 100\% automatizada, fazendo uso de grandes bases de dados, modelagens matemáticas, simulações estatísticas, algoritmos de aprendizado de máquina, otimização e implementações computacionais de alta performance para identificar, validar, desenvolver e executar estratégias de investimento automatizadas que não seriam possíveis de serem criadas e operacionalizadas manualmente por humanos.
+
+Como qualquer investimento na bolsa, os riscos, assim como os retornos, podem ser altos. Isso torna essencial um rigoroso gerenciamento de risco, em especial nos fundos quantitativos, devido ao alto volume financeiro e frequência de suas negociações. Pensando nisso, a Alphabot utiliza dezenas de métricas de risco para analisar e gerenciar seu portfólio de estratégias quantitativas, dentre as quais destacam-se o \emph{drawdown} e o \emph{drawdown percentual}.
 
 Seja $P_1, P_2, \ldots, P_N$ a sequência de preços de um ativo em $N$ instantes de tempo.
-O \emph{drawdown} entre os intantes $i$ $(1 \leq i \leq N)$ e $j$ $(i \leq j \leq N)$ é a queda de preço do instante $i$ para o instante $j$ e
+O \emph{drawdown} entre os instantes $i$ $(1 \leq i \leq N)$ e $j$ $(i \leq j \leq N)$ é definido como a queda de preço do instante $i$ para o instante $j$ e
 pode ser calculado pela seguinte fórmula:
 \begin{equation*}
     \operatorname{drawdown}\left(i, j\right) = \begin{cases}
@@ -12,7 +12,7 @@ pode ser calculado pela seguinte fórmula:
     \end{cases}
 \end{equation*}
 
-O \emph{drawdown percentual} entre dois instantes de tempo $i$ $(1 \leq i \leq N)$ e $j$ $(i \leq j \leq N)$ é a razão entre o \emph{drawdown} entre $i$ e $j$ e o preço do ativo no instance $i$. Isto é
+O \emph{drawdown percentual} entre dois instantes de tempo $i$ $(1 \leq i \leq N)$ e $j$ $(i \leq j \leq N)$ é definido como a razão entre o \emph{drawdown} entre $i$ e $j$ e o preço do ativo no instante $i$. Isto é
 \begin{equation*}
     \operatorname{drawdown\_percentual}\left(i, j\right) = \frac{\operatorname{drawdown}\left(i, j\right)}{P_i}. 
 \end{equation*}
@@ -21,13 +21,12 @@ Por exemplo, considere um ativo com o seguinte histórico de preços:
 \begin{equation*}
 P_1 = 100, P_2 = 120, P_3 = 80, P_4 =  60, P_5 = 70.
 \end{equation*}
-O \emph{drawdown} e o \emph{drawdown percentual} entre os instances $2$ e $4$ são $60$ e $50\%$, respectivamente.
+O \emph{drawdown} e o \emph{drawdown percentual} entre os instantes $2$ e $4$ são $60$ e $50\%$, respectivamente.
 
-O \emph{drawndown percentual} entre os instantes $i$ e $j$ diz aos investidores qual porcentagem do capital investido teria sido perdido caso
-o ativo tivesse sido comprado no instante $i$ e vendido no instante $j$. No exemplo acima, um investidor que tivesse comprado $10$ unidades do ativo no instante $2$ por um preço total de $1200$ e vendido no instance $4$ por um preço total de $600$, teria perdio $600$. Ou seja, teria perdido $50\%$ dos $1200$ investidos inicialmente.
+O \emph{drawndown percentual} entre os instantes $i$ e $j$ representa qual porcentagem do capital investido teria sido perdido caso o ativo tivesse sido comprado no instante $i$ e vendido no instante $j$. No exemplo acima, um investidor que tivesse comprado $10$ unidades do ativo no instante $2$ por um preço total de $1200$ e vendido no instante $4$ por um preço total de $600$, teria perdido $600$. Ou seja, teria perdido $50\%$ dos $1200$ investidos inicialmente.
 
 
-Uma forma de avaliar o risco de um ativo em um intervalo de tempo entre os instantes $a$ $(1 \leq a \leq N)$ e $b$ $(a \leq b \leq N)$ é calcular o maiores valores de \emph{drawdown} e \emph{drawdown percenutal} nesse intervalo de tempo. Mais precisamente, temos que:
+Uma forma de avaliar o risco de um ativo em um intervalo de tempo entre os instantes $a$ $(1 \leq a \leq N)$ e $b$ $(a \leq b \leq N)$ é calcular os maiores valores de \emph{drawdown} e \emph{drawdown percentual} nesse intervalo de tempo. Mais precisamente, temos que:
 
 \begin{equation*}
     \operatorname{max\_drawdown}\left(a, b\right) = \max\left\{\operatorname{drawdown}\left(i, j\right) : {a \leq i \leq j \leq b}\right\}
@@ -37,28 +36,26 @@ Uma forma de avaliar o risco de um ativo em um intervalo de tempo entre os insta
     \operatorname{max\_drawdown\_percentual}\left(a, b\right) = \max\left\{\operatorname{drawdown\_percentual}\left(i, j\right) : {a \leq i \leq j \leq b}\right\}
 \end{equation*}
 
-Dada a sequência de preços de um ativo e vários intervalos de tempo, calcule o \emph{drawdown máximo} e o \emph{drawdown percentual máximo}
-para cada intervalo.
+Dada a sequência de preços de um ativo investido pela Alphabot e vários intervalos de tempo, calcule o \emph{drawdown máximo} e o \emph{drawdown percentual máximo} para cada intervalo.
 
 \section*{Entrada}
 
-A primeira linha da entrada contém um inteior $N$, que representa o número de instantes de tempo na sequência de preços.
-A segunda linha da entrada contém $N$ inteiros positivos $P_1, P_2, \ldots, P_N$, onde $P_i$ representa o preço do ativo no $i-$ésimo instance
-de tempo.
+A primeira linha da entrada contém um inteiro $N$, que representa o número de instantes de tempo na sequência de preços.
+A segunda linha da entrada contém $N$ inteiros positivos $P_1, P_2, \ldots, P_N$, onde $P_i$ representa o preço do ativo no $i-$ésimo instante de tempo.
 A terceira linha da entrada contém um inteiro $Q$, representando o número de intervalos de tempo para os quais o \emph{drawdown máximo} e o
-\emph{drawdown percentual máixmo}  devem ser caluclados.
-A $i-$-ésima das $Q$ linhas seguintes contém dois interios $a_i$ e $b_i$ separados por espaço, representado o intervalo de tempo entre os instantes $a_i$ e $b_i$, inclusive. 
+\emph{drawdown percentual máximo}  devem ser calculados.
+A $j-$ésima das $Q$ linhas seguintes contém dois inteiros $a_j$ e $b_j$ separados por espaço, representado o intervalo de tempo entre os instantes $a_j$ e $b_j$, inclusive. 
 \section*{Saída}
 
-A saída deve conter exatamente $Q$ linhas. A $i-$ésima linha da saída deve conter três inteiros não-negativos separados por espaço $D$, $R$ e $S$, onde $D$ e $\dfrac{R}{S}$ representam o \emph{drawdown máximo} e o \emph{drawdown percentual máximo} entre $a_i$ e $b_i$, respectivamente. Também é preciso garantir que o maior divisor comum entre $R$ e $S$ seja $1$. 
+A saída deve conter exatamente $Q$ linhas. A $j-$ésima linha da saída deve conter três inteiros não-negativos separados por espaço $D$, $R$ e $S$, onde $D$ e $\dfrac{R}{S}$ representam o \emph{drawdown máximo} e o \emph{drawdown percentual máximo} entre $a_j$ e $b_j$, respectivamente. Também é preciso garantir que o maior divisor comum entre $R$ e $S$ seja $1$. 
 
 \section*{Restrições}
 
 \begin{itemize}
     \item $1 \leq N \leq 5\times{10}^5$.
     \item $1 \leq P_i \leq {10}^9$ para todo $1 \leq i \leq N$.
-    \item $1 \leq Q \leq M \leq 5\times{10}^5$.
-    \item $1 \leq a_i \leq b_i \leq N$ para todo $1 \leq i \leq Q$.
+    \item $1 \leq Q \leq 5\times{10}^5$.
+    \item $1 \leq a_j \leq b_j \leq N$ para todo $1 \leq j \leq Q$.
 \end{itemize}
 
 
