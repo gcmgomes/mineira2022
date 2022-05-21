@@ -32,17 +32,29 @@ if T == 6:
 ED"""
 
 if T == 7:
+	print """90
+EEDDDD"""
+
+if T == 8:
+	print """90
+DDEEEE"""
+
+if T == 9:
+	print """90
+DDEEEDDEEDEE"""
+
+if T == 10:
     print 1
     print(('E' * 359) + ('DE' * 49000))
 
-if T == 8:
+if T == 11:
     print 1
     print(('D' * 359) + ('ED' * 49000))
 
-if T == 9:
+if T == 12:
     print 1
     print(('E' * 359) + ('DE' * 49000) + 'E')
     
-if T == 10:
+if T == 13:
     print 1
     print(('D' * 359) + ('ED' * 49000) + 'D')    
