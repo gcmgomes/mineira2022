@@ -28,8 +28,8 @@
 3     ; gen_random.exe 30 39
 3     ; gen_random.exe 50 1
 3     ; gen_random.exe 1 99
-3     ; gen_random.exe 123 789
-3     ; gen_random.exe 876 13
-3     ; gen_random.exe 996 999
-3     ; gen_random.exe 1000 999
-3     ; gen_random.exe 1000 1000
+3     ; gen_random.exe 123 489
+3     ; gen_random.exe 376 13
+3     ; gen_random.exe 496 499
+3     ; gen_random.exe 500 499
+3     ; gen_random.exe 500 500
