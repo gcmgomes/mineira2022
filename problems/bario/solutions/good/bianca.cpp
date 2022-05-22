@@ -4,7 +4,7 @@
 using namespace std;
 
 int solve(string s){
-    int carga = 1, result = 0;
+    int carga = 0, result = 0;
     bool pulando = false;
   
     for(int i=0; i<s.size(); i++){
