@@ -1,5 +1,9 @@
-A cifra de transposição Rail Fence é um clássico algoritmo de criptografia. A ideia é cifrar uma mensagem escrevendo cada caracter diagonalmente para baixo e para cima em sucessivos trilhos de uma cerca imaginária. Um verdadeiro zig-zag! Depois, basta obter a sequência horizontal de caracteres, da esquerda para a direita, de cima para baixo, para formar a mensagem cifrada, sempre ignorando espaços e pontuação.
-Por exemplo, para encriptar a mensagem: \texttt{“QUEM TE CONHECE NAO ESQUECE JAMAIS”} em 3 trilhos, escreva o texto como:
+A cifra de transposição Rail Fence é um clássico algoritmo de criptografia. A ideia é cifrar uma mensagem escrevendo cada caracter diagonalmente
+para baixo e para cima em sucessivos trilhos de uma cerca imaginária.
+Um verdadeiro zig-zag!
+Depois, basta obter a sequência horizontal de caracteres, da esquerda para a direita, de cima para baixo, para formar a mensagem cifrada, sempre
+ignorando espaços e pontuação.
+Por exemplo, para criptografar a mensagem: \texttt{“QUEM TE CONHECE NAO ESQUECE JAMAIS”} em 3 trilhos, escreva o texto como:
 
 %\begin{center}
 %\small
@@ -37,7 +41,8 @@ Então, leia o texto horizontalmente, da esquerda para direita, de cima para bai
 QTNEEEASUMEOHCNOSUCJMIECEAQEA
 \end{verbatim}
 
-Sua missão é escrever uma solução para obter a mensagem original, ignorando espaços e pontuação, a partir da mensagem cifrada $C$ e do número de trilhos $N$ utilizados para codificá-la.
+Sua missão é escrever uma solução para obter a mensagem original, ignorando espaços e pontuação, a partir da mensagem cifrada $C$ e do número de trilhos
+$N$ utilizados para codificá-la.
 
 \section*{Entrada}
 
@@ -55,7 +60,7 @@ A saída deve conter uma única string $M$, representando a mensagem decodificad
 \item $1 \leq N \leq |C|$
 \end{itemize}
 
-É garantido que $C$ contém apenas letras.
+É garantido que $C$ contém apenas letras maiúsculas.
 
 \section*{Exemplos}
 
