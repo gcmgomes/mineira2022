@@ -1,26 +1,27 @@
-Foi construído um museu de arte moderna na cidade de Timóteo.
-Com o intuito de garantir a segurança das obras de artes ali presentes, câmeras de segurança serão instaladas pelo museu.
-Devido a corte de custos, apenas uma câmera será instalada por sala.
+Foi construído um museu de arte moderna na cidade de Timóteo. Com o intuito de garantir a segurança das obras
+de artes ali presentes, câmeras com visão $360 ^{\circ}$ foram instaladas pelo museu.
+Devido a corte de custos, apenas uma câmera foi instalada por sala.
 
-A empresa que realizou a instalação não se certificou se todas as paredes eram completamente visíveis pela câmera e agora ela precisa de sua ajuda.
+A empresa que realizou a instalação não certificou se todas as paredes eram completamente visíveis pela câmera e agora ela precisa de sua ajuda.
 
-Dado a planta baixa do museu e a posição da câmera, você deve, inicialmente indicar se todas as paredes são visíveis ou não.
+Dado a planta baixa de uma sala do museu e a posição da câmera, você deve indicar se todas as paredes são visíveis por ela ou não.
 
-
-Uma parede é considerada vigiada pela câmera se todos os pontos sobre ela podem ser vistos pela câmera e não são bloqueados por outra parede.
+Uma parede é considerada vigiada pela câmera se todos os pontos sobre ela podem ser vistos pela câmera, ou seja, não são bloqueados por outra parede.
+Uma parede colinear com a câmera também não é considerada como vigiada.
 
 
 \section*{Entrada}
 
-A entrada é composta pela descrição de uma sala do museu e da posição da câmera.
+A entrada é composta pela descrição de uma sala do museu e da posição da câmera, sendo que a sala é
+representada por um polígono simples.
 A primeira linha contêm um inteiro $N$, que representa a quantidade de paredes da sala.
-Em seguida, teremos $N$ linhas. A $i$-ésima linha contêm 2 inteiros $X_i, Y_i$, as coordenadas do $i$-ésimo ponto.
-Uma parede é formada pelo ponto $i$ e o ponto $i+1$. O último ponto da entrada com o primeiro ponto formam a última parede.
+Em seguida, temos $N$ linhas. A $i$-ésima linha contêm $2$ inteiros $X_i$, $Y_i$ que são as coordenadas do $i$-ésimo ponto.
+Uma parede é formada pela ligação do ponto $i$ com o ponto $i+1$. O $N$-ésimo ponto da entrada com o primeiro ponto formam a última parede.
 Por fim, temos mais uma linha com dois inteiros $C_x, C_y$, que representam as coordenadas da câmera.
 
 \section*{Saída}
 
-A saída deve conter o caracter \texttt{S} caso todas as paredes sejam completamente visíveis pela câmera e \texttt{N} caso contrário.
+A saída deve conter uma linha com o caracter \texttt{S} caso todas as paredes sejam completamente vigiadas pela câmera e \texttt{N} caso contrário.
 
 \section*{Restrições}
 
@@ -29,7 +30,7 @@ A saída deve conter o caracter \texttt{S} caso todas as paredes sejam completam
     \item $-10^5 \leq X_i, Y_i, C_x, C_y \leq 10^5 $
 \end{itemize}
 
-É garantido que as coordenadas válidas geram um polígono simples e que as coordenadas da câmera se encontram dentro desse polígono.
+É garantido que as coordenadas geram um polígono simples e que as coordenadas da câmera se encontram dentro desse polígono.
 
 \section*{Exemplos}
 
@@ -56,6 +57,9 @@ A saída deve conter o caracter \texttt{S} caso todas as paredes sejam completam
     \coordinate (CAM2) at (5,3);
     \draw (CAM2) node[anchor=south west] {Y} node {$\bullet$};
     
+    \coordinate (CAM3) at (5,5);
+    \draw (CAM3) node[anchor=south west] {Z} node {$\bullet$};
+
     \draw (0,0) -- (6,0) -- (6,6) -- (3,6) -- (3,3) -- (0,3) -- (0,0);
     \draw [draw=black!90,very thick](3,3) -- (0,3);
 
@@ -68,6 +72,7 @@ A saída deve conter o caracter \texttt{S} caso todas as paredes sejam completam
 
 
 \end{tikzpicture}
-\caption{O ponto X representa a câmera do primeiro exemplo e Y a câmera do segundo exemplo. No segundo exemplo, a câmera Y não consegue monitorar completamente a parede
- (e,f) }
+\caption{Os pontos $X$, $Y$ e $Z$ representam a posição da câmera no primeiro, segundo e terceiro exemplo, respectivamente.
+No segundo exemplo, a câmera $Y$ não consegue monitorar completamente a parede $(e,f)$ e no terceiro exemplo a
+câmera $Z$ não monitora $(e,f)$ e $(f, a)$ }
 \end{figure}
