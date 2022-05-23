@@ -75,6 +75,7 @@ int SolvePath(vector<int>& path, int k) {
 int main() {
   int n = 0, m = 0, k = 0;
   cin >> n >> m >> k;
+  k++;
   total_jewels = n * m;
   vector<vector<int>> grid(n, vector<int>(m, 0));
   for (int i = 0; i < n; i++) {

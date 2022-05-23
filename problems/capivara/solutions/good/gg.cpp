@@ -67,6 +67,7 @@ int SolvePath(vector<int>& path, int k) {
 int main() {
   int n = 0, m = 0, k = 0;
   scanf("%d %d %d", &n, &m, &k);
+  k++;
   total_jewels = n * m;
   vector<vector<int>> grid(n, vector<int>(m, 0));
   for (int i = 0; i < n; i++) {
@@ -89,6 +90,6 @@ int main() {
   } else {
     ret_val = SolveGrid(grid, n, m, k);
   }
-  printf("%d", ret_val);
+  printf("%d\n", ret_val);
   return 0;
 }

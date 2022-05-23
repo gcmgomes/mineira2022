@@ -20,13 +20,13 @@
 # big probably bad grid.
 2     ; gen_random_grid.exe 3000 300 900000
 # large feasible grid.
-2     ; gen_random_grid.exe 3000 4000 12000000 1
+2     ; gen_random_grid.exe 3000 4000 1200000 1
 # large probably bad grid.
-2     ; gen_random_grid.exe 3000 4000 12000000
+2     ; gen_random_grid.exe 3000 4000 1200000
 # huge feasible grid.
-2     ; gen_random_grid.exe 25000 2000 50000000 1
+2     ; gen_random_grid.exe 25000 2000 5000000 1
 # huge probably bad grid.
-2     ; gen_random_grid.exe 25000 2000 50000000
+2     ; gen_random_grid.exe 25000 2000 5000000
 # small grid with k too large.
 2     ; gen_random_grid.exe 20 20 30000 1
 # medium grid with k too small.
@@ -58,9 +58,9 @@
 # large bad path.
 3     ; gen_random_path.exe 700000 398765 False
 # huge feasible path.
-3     ; gen_random_path.exe 49999999 25000000 False 1
+3     ; gen_random_path.exe 4999999 2500000 False 1
 # huge bad path.
-3     ; gen_random_path.exe 49999999 25000000 False
+3     ; gen_random_path.exe 4999999 2500000 False
 
 # Boundary path cases
 # 2k - 1 large path.
