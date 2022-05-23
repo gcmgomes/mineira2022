@@ -4,9 +4,9 @@
 
 using namespace std;
 
-const int MAX_N = 50000000;
-const int MAX_M = 50000000;
-const int MAX_K = 50000000;
+const int MAX_N = 5000000;
+const int MAX_M = 5000000;
+const int MAX_K = 5000000;
 
 int component_size(vector<vector<int>>& grid, vector<vector<int>>& visits,
                    int i, int j) {
@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
   inf.readSpace();
   int m = inf.readInt(1, MAX_M);
   inf.readSpace();
-  int x = inf.readInt(2, MAX_K);
+  int x = inf.readInt(1, MAX_K);
   inf.readEoln();
 
   vector<vector<int>> grid(n, vector<int>(m, 0)), visits;
