@@ -49,6 +49,7 @@ int main(int argc, char* argv[]) {
   inf.readSpace();
   int x = inf.readInt(1, MAX_K);
   inf.readEoln();
+  assert(n * m <= MAX_N);
 
   vector<vector<int>> grid(n, vector<int>(m, 0)), visits;
   visits = grid;

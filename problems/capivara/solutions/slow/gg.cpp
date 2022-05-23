@@ -63,7 +63,6 @@ int SolvePath(vector<int>& path, int k) {
   int min_swaps = INF;
   for (int merger = path.size() - k; merger < k; merger++) {
     for (int color = 1; color < 4; color++) {
-      cout << min_swaps << std::endl;
       int swaps = (path[merger] == color) ? 2 : 0;
       swaps += ColorCount(path, color);
       min_swaps = min(min_swaps, swaps);
