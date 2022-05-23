@@ -26,9 +26,9 @@ m = max_m if force_size else randint(1, max_m)
 n = 1
 
 if as_column:
-    print("{} {} {}".format(m, n, k))
+    print("{} {} {}".format(m, n, k-1))
 else:
-    print("{} {} {}".format(n, m, k))
+    print("{} {} {}".format(n, m, k-1))
 row = []
 prev_color = 0
 while len(row) < m:

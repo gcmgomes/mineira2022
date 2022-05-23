@@ -25,7 +25,7 @@ n = max_n if force_size else randint(int(0.9*max_n), max_n)
 
 grid = []
 
-print("{} {} {}".format(n, m, k))
+print("{} {} {}".format(n, m, k-1))
 init_color = randint(1,3)
 prev_count = 0
 for i in range(0, n):

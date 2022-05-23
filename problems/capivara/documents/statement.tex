@@ -3,11 +3,17 @@ Sim, isso está acontecendo de novo.
 Pela terceira maratona seguida teremos um problema envolvendo a dinastia fundada por Bacon -- o Grade.
 Desta vez, o protagonista de nossa história é o neto mais novo de Bacon -- o Bravo -- filho de Bacon -- a Ambiciosa -- e o rei mais improvável já registrado como monarca de todas as capivaras.
 
-Esta passagem das \textit{Crônicas das Capivaras} narra os primeiros momentos do reinado de Bacon -- o Grafo -- que, ao invés de se tornar um monarca absolutista como seus antecessores, repartiu o poder entre vários ministros para poder se dedicar a sua verdadeira paixão: a combinatória. Ele voltou suas atenções para a abertura de um antigo baú do tesouro adquirido por sua mãe após uma dura campanha de inverno contra insurgentes e que tem frustrado os mais renomados pensadores do reino.
+Esta passagem das \textit{Crônicas das Capivaras} narra os primeiros momentos do reinado de Bacon -- o Grafo -- que, ao invés de se tornar um monarca absolutista como seus antecessores, repartiu o poder entre vários ministros para poder se dedicar a sua verdadeira paixão: a combinatória.
+Ele voltou suas atenções para a abertura de um antigo baú do tesouro adquirido por sua mãe após uma dura campanha de inverno contra insurgentes e que tem frustrado os mais renomados pensadores do reino.
 
 A fechadura do baú é composta por um tabuleiro quadriculado de dimensões $N$ por $M$ em que cada umas das $N*M$ posições tem uma joia encrustada que pode mudar para uma de $3$ possíveis cores.
+Uma joia na posição $(a,b)$ do tabuleiro é adjacente a todas as joias $(x,y)$ que satifazem $|a - x| + |b - y| = 1$.
+As joias tem propriedades mágicas, de tal forma que duas joias em posições adjacentes no tabuleiro entram em ressonância se e somente se elas tem a mesma cor.
+Esse efeito é transitivo, ou seja, se $(a,b)$ está em ressonância com $(c,d)$ e $(c,d)$ estám em ressonância com $(x,y)$, então $(a,b)$ também está em ressonância com $(x,y)$.
+As joias, porém, não são muito resistentes e se uma joia está em ressonância com pelo menos outras $K$ joias, ela se desintegra instantaneamente.
+O tabuleiro do baú também é especial, e permite que seu usuário troque a cor de uma única joia por vez.
 
-O mecanismo de segurança funciona da seguinte forma: se existe um conjunto de joias da mesma cor de tamanho pelo menos $K$ no qual podemos traçar um caminho entre quaisquer duas que passe apenas pelo conjunto, as joias desaparecem; a trava é liberada somente se todas as joias desaparecerem ao mesmo tempo.
+O mecanismo de segurança é simples: o tesouro é destrancado se e somente se todas as joias no tabuleiro se desintegram no mesmo instante de tempo.
 
 Exausto após tantas tentativas mal sucedidas, nosso herói caminhou para uma necessária noite de sono; ele não sabia nem se era possível abrir o tesouro e as dúvidas o deixaram cada vez mais desesperançoso.
 Mas por quê necessária?
@@ -18,9 +24,9 @@ Claramente, vocês são essas entidades. Salvem nosso monarca favorito lhe dizen
 
 \section*{Entrada}
 
-A primeira linha da entrada contem os inteiros $N, M$ e $K$, separados por espaço, que representam, respectivamente, o número de linhas e colunas do tabuleiro e o tamanho mínimo para o conjunto de joias monocromáticas desaparecer.
-Em seguida, existem $N$ linhas, cada uma com $M$ inteiros, separados por espaço, entre $1$ e $3$, representando as cores das joias na respectiva linha.
-É garantido que o tamanho dos conjuntos de mesma cor na entrada não excedem $K$.
+A primeira linha da entrada contém os inteiros $N, M$ e $K$, separados por espaço, que representam, respectivamente, o número de linhas e colunas do tabuleiro e o limite de resistência das joias.
+Em seguida, existem $N$ linhas, cada uma com $M$ inteiros, separados por espaço, representando as cores das joias na respectiva linha.
+É garantido que nenhuma joia está em ressonância com $K$ outras jóias.
 
 \section*{Saída}
 
@@ -30,9 +36,9 @@ Caso isso seja impossível, imprima $-1$.
 \section*{Restrições}
 
 \begin{itemize}
-\item $1 \leq N, M \leq 5 * 10^7$
-\item $1 \leq N*M \leq 5 * 10^7$
-\item $2 \leq K \leq 5*10^7$
+\item $1 \leq N, M \leq 5 * 10^6$
+\item $1 \leq N*M \leq 5 * 10^6$
+\item $1 \leq K \leq 5 * 10^6$
 \end{itemize}
 
 
