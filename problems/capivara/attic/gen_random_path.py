@@ -3,7 +3,6 @@
 # Sample test generator
 
 import sys,os,string
-import numpy as np
 from random import seed, randint, sample
 
 # first argument must be seed.
