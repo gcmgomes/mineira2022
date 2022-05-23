@@ -163,7 +163,7 @@ int main() {
     for (int i = 0; i < edges.size(); i = i + 2) {
       split_edges.push_back(edges[i]);
     }
-    cout << printf("%lld\n", Solve(split_edges, (n - 1) / 2));
+    printf("%lld\n", Solve(split_edges, (n - 1) / 2));
   } else {
     vector<int> odds, evens;
     for (int i = 0; i < edges.size(); i++) {
