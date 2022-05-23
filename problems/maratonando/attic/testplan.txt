@@ -4,6 +4,7 @@
 
 # Use samples as tests
 1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
 
 # Use manual cases
 2     ; copy attic/manual-1.in
