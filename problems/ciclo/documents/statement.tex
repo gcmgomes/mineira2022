@@ -2,8 +2,7 @@ Cirila adora jogos de tabuleiro, tanto pelas noites de diversão que eles propor
 Sua paixão por eles é tão grande que ela resolveu criar o próprio jogo: Bloomhaven. Rapidamente, ela descobriu que garantir o equilíbrio entre os diferentes componentes é muito difícil, e que resolver vários casos de teste na mão é cansativo e demanda muito tempo.
 A última mecânica de jogo que ela precisa implementar é o sistema de feitiços, e Cirila decidiu fazer ele bem diferente de todos os outros que já viu.
 Ele funciona da seguinte forma: cada personagem possui um disco com $N$ símbolos, e entre dois símbolos consecutivos está um encantamento com um determinado poder.
-O sistema de magia usa os encantamentos de tal forma que: (i) um mesmo símbolo não pode ser usado em dois encantamentos, (ii) um simbolo está ativo se ele faz parte de um encantamento, (iii) entre quaisquer dois simbolos ativos, deve existir uma sequência contígua de símbolos ativos, e (iv) o poder do feitiço é a soma do poder dos encatamentos escolhidos.
-Claramente, todo feitiço precisa de pelo menos um encantamento.
+Para realizar uma magia, é preciso escolher um subconjunto não vazio de encatamentos. Cada encantamento escolhodo ativa os dois símbolos adjacentes a ele. Para que a magia seja considerada válida, é preciso que: (i) cada símbolo seja ativado por no máximo um dos encantamos escolhidos, (ii) os símbolos ativos formem uma sequência contígua no disco.
 Cirila gostaria de saber qual a magia mais poderosa que pode ser usada pelo personagem, mas não quer gastar mais tempo que o necessário fazendo essas contas.
 Escreva um programa que ajude Cirila a resolver esse problema e, quem sabe, terá seu nome no livro de regras com um agradecimento especial!
 
