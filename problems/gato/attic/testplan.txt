@@ -4,6 +4,7 @@
 
 # Use samples as tests
 1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
 
 # Mostly bad pairs
 2     ; gen_random.exe 5 5 5 5
