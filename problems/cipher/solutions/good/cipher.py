@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# encoding: utf-8
 # Solucao do problema "Cipher"
 # Fabiola Pereira (fabiola.pereira@ufu.br)
 # Maratona Mineira de Programacao 2022
