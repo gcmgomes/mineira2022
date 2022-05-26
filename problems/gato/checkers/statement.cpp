@@ -1,5 +1,5 @@
 #include <unordered_set>
-
+#include <cassert>
 #include "testlib.h"
 
 using namespace std;
