@@ -40,6 +40,7 @@ int main(int argc, char* argv[]) {
   vector<vector<int>> graph(n + e);
   for (int i = 0; i < n; i++) {
     int n_i = inf.readInt(1, e);
+    inf.readSpace();
     graph[i] = inf.readInts(n_i);
     for (auto& v : graph[i]) {
       assert(n < v && v <= n + e);

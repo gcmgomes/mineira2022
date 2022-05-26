@@ -8,3 +8,40 @@
 
 # Use manual cases
 2     ; copy attic/manual-1.in
+
+# Random cases
+3     ; gen_random.exe 30 50 0.2
+3     ; gen_random.exe 30 50 0.7
+3     ; gen_random.exe 100 250 0.2
+3     ; gen_random.exe 500 600 0.2
+3     ; gen_random.exe 600 500 0.2
+3     ; gen_random.exe 1000 800 0.2
+3     ; gen_random.exe 500 1000 0.2
+3     ; gen_random.exe 30 50 0.4
+3     ; gen_random.exe 100 250 0.4
+3     ; gen_random.exe 500 600 0.4
+3     ; gen_random.exe 600 500 0.4
+3     ; gen_random.exe 1000 800 0.4
+3     ; gen_random.exe 500 1000 0.4
+
+# Sparse cases
+4     ; gen_sparse.exe 30 50 5 0.2
+4     ; gen_sparse.exe 30 40 20 0.7
+4     ; gen_sparse.exe 100 240 3 0.2
+4     ; gen_sparse.exe 400 450 1 0.2
+4     ; gen_sparse.exe 450 400 1 0.2
+4     ; gen_sparse.exe 20 22 35 0.2
+4     ; gen_sparse.exe 25 31 25 0.1
+4     ; gen_sparse.exe 12 10 50 0.1
+4     ; gen_sparse.exe 10 17 50 0.1
+4     ; gen_sparse.exe 10 12 60 0.5
+
+
+# Super sparse cases
+5     ; gen_super_sparse.exe 30 50 5 20 0.2
+5     ; gen_super_sparse.exe 30 40 20 5 0.7
+5     ; gen_super_sparse.exe 100 200 3 50 0.4
+5     ; gen_super_sparse.exe 400 450 1 50 0.4
+5     ; gen_super_sparse.exe 150 300 1 300 0.2
+5     ; gen_super_sparse.exe 20 30 4 100 0.3
+5     ; gen_super_sparse.exe 20 30 20 10 0.3
