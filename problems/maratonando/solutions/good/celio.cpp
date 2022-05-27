@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include <queue>
-#include <cassert>
 
 struct Kuhn {
   int N, M;
@@ -95,7 +94,6 @@ int main() {
         kuhn.U.push_back(u);
         std::sort(G[u].begin(), G[u].end(), [&](int v1, int v2) { return dist[v1] < dist[v2]; });
         for (auto v : G[u]) {
-          assert(0 <= v - N && v - N < E);
           kuhn.add_edge(u, v - N);
         }
       }
