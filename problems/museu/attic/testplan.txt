@@ -8,70 +8,85 @@
 
 2     ; copy attic/manual/sala1_n_vis_1.in
 2     ; copy attic/manual/sala1_n_vis_2.in
+#       igual ao anterior, porem em cw
+2     ; copy attic/manual/sala1_n_vis_3.in
 2     ; copy attic/manual/sala1_n_vis_colinear_1.in
 2     ; copy attic/manual/sala1_n_vis_colinear_2.in
 2     ; copy attic/manual/sala1_visivel_1.in
 2     ; copy attic/manual/sala1_visivel_2.in
+#       igual ao anterior, porem em cw
+2     ; copy attic/manual/sala1_visivel_3.in
 2     ; copy attic/manual/sala2_n_vis_1.in
 
 # Use generators
-3     ; gen_luciano.exe  10   50   convex  ccw
-3     ; gen_luciano.exe  10   50   convex  ccw
-3     ; gen_luciano.exe  10   50   convex  ccw
-3     ; gen_luciano.exe  10   50   convex  cw
-3     ; gen_luciano.exe  100  500  convex  ccw
-3     ; gen_luciano.exe  100  500  convex  ccw
-3     ; gen_luciano.exe  100  500  convex  ccw
-3     ; gen_luciano.exe  100  500  convex  ccw
-3     ; gen_luciano.exe  100  500  convex  cw
 
-4     ; gen_luciano.exe  20   50   concave ccw
-4     ; gen_luciano.exe  20   50   concave ccw
-4     ; gen_luciano.exe  20   50   concave ccw
-4     ; gen_luciano.exe  20   50   concave cw
-4     ; gen_luciano.exe  100  500  concave ccw
-4     ; gen_luciano.exe  100  500  concave ccw
-4     ; gen_luciano.exe  100  500  concave ccw
-4     ; gen_luciano.exe  100  500  concave cw
+# LOSANGO
+3     ; gen_fixed.exe 0 0 ccw
+3     ; gen_fixed.exe 0 0 cw
+3     ; gen_fixed.exe 2 -2 ccw
+3     ; gen_fixed.exe 2 -2 cw
 
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex ccw
-5     ; gen_jngen.exe  20    1000   convex cw
-5     ; gen_jngen.exe  20    1000   convex cw
-5     ; gen_jngen.exe  1000  30000  convex ccw
-5     ; gen_jngen.exe  1000  30000  convex ccw
-5     ; gen_jngen.exe  1000  30000  convex cw
-5     ; gen_jngen.exe  1000  30000  convex cw
+# QUADRADO
+3     ; gen_fixed2.exe 0 0 ccw
+3     ; gen_fixed2.exe 0 0 cw
 
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave ccw
-6     ; gen_jngen.exe  20    1000   concave cw
-6     ; gen_jngen.exe  20    1000   concave cw
-6     ; gen_jngen.exe  1000  30000  concave ccw
-6     ; gen_jngen.exe  1000  30000  concave ccw
-6     ; gen_jngen.exe  1000  30000  concave cw
-6     ; gen_jngen.exe  1000  30000  concave cw
+4     ; gen_luciano.exe  10   50   convex  ccw
+4     ; gen_luciano.exe  10   50   convex  ccw
+4     ; gen_luciano.exe  10   50   convex  ccw
+4     ; gen_luciano.exe  10   50   convex  cw
+4     ; gen_luciano.exe  100  500  convex  ccw
+4     ; gen_luciano.exe  100  500  convex  ccw
+4     ; gen_luciano.exe  100  500  convex  ccw
+4     ; gen_luciano.exe  100  500  convex  ccw
+4     ; gen_luciano.exe  100  500  convex  cw
+
+5     ; gen_luciano.exe  20   50   concave ccw
+5     ; gen_luciano.exe  20   50   concave ccw
+5     ; gen_luciano.exe  20   50   concave ccw
+5     ; gen_luciano.exe  20   50   concave cw
+5     ; gen_luciano.exe  100  500  concave ccw
+5     ; gen_luciano.exe  100  500  concave ccw
+5     ; gen_luciano.exe  100  500  concave ccw
+5     ; gen_luciano.exe  100  500  concave cw
+
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex ccw
+6     ; gen_jngen.exe  20    1000   convex cw
+6     ; gen_jngen.exe  20    1000   convex cw
+6     ; gen_jngen.exe  1000  30000  convex ccw
+6     ; gen_jngen.exe  1000  30000  convex ccw
+6     ; gen_jngen.exe  1000  30000  convex cw
+6     ; gen_jngen.exe  1000  30000  convex cw
+
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave ccw
+7     ; gen_jngen.exe  20    1000   concave cw
+7     ; gen_jngen.exe  20    1000   concave cw
+7     ; gen_jngen.exe  1000  30000  concave ccw
+7     ; gen_jngen.exe  1000  30000  concave ccw
+7     ; gen_jngen.exe  1000  30000  concave cw
+7     ; gen_jngen.exe  1000  30000  concave cw
