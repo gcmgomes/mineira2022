@@ -1,3 +1,9 @@
+/**
+ *
+ * Considera que o polígono foi listado apenas em CCW.
+ *
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -49,36 +55,17 @@ vector<point> P;
 point C;
 
 void solve(){
-    bool ok = true;
-    int cont1 = 0;
-    int cont2 = 0;
-
     for (size_t i = 0; i < P.size(); i++)
     {
         int ret = ccw(C, P[i], P[(i + 1)%P.size()]);
-
-        if (ret == 0)
+        if (ret <= 0)
         {
             cout << "N\n";
             return;
         }
-
-        if (ret > 0)
-            cont1++;
-
-        if (ret < 0)
-            cont2++;
     }
 
-    if (cont1 == P.size() || cont2 == P.size())
-    {
-        cout << "S\n";
-    }
-    else
-    {
-        cout << "N\n";
-    }
-
+    cout << "S\n";
     return;
 }
 

@@ -59,12 +59,16 @@ int in_poly(Point p, vector<Point> &T)
 	return cmp(a) != 0;
 }
 
-void printPoints(vector<Point> &p, string text = "")
+void printPoints(vector<Point> p, bool print_in_ccw, string text = "")
 {
 	if (text.size())
 		cout << text << endl;
 
 	cout << p.size() << endl;
+
+	if (print_in_ccw == false)
+		reverse(p.begin(), p.end());
+	
 	for (size_t i = 0; i < p.size(); i++)
 		cout << p[i].x << " " << p[i].y << endl;
 	if (text.size())
@@ -78,6 +82,7 @@ int main(int argc, char *argv[])
 	int n = atoi(argv[2]);
 	int max_xy = atoi(argv[3]);
 	string testcase_type = string(argv[4]);
+	bool print_in_ccw = (string(argv[5]) == "ccw");
 
 	vector<Point> poly = jngen::GeometryRandom::convexPolygon(n, -max_xy, max_xy);
 	Point camera;
@@ -91,7 +96,7 @@ int main(int argc, char *argv[])
 		} while (in_poly(camera, poly) != 1);
 
 		//printPoints(poly, "Polygon");
-		printPoints(poly, "");
+		printPoints(poly, print_in_ccw, "");
 		cout << camera.x << " " << camera.y << endl;
 	}
 	else if (testcase_type == "concave")
@@ -112,7 +117,7 @@ int main(int argc, char *argv[])
 		} while (in_poly(camera, poly) != 1);
 
 		//printPoints(poly, "Polygon");
-		printPoints(poly, "");
+		printPoints(poly, print_in_ccw, "");
 		cout << camera.x << " " << camera.y << endl;
 	}
 

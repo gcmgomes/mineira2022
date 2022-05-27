@@ -80,7 +80,7 @@ bool seg_intersect(point a, point b, point c, point d)
 
 /* Retorna a area com sinal de um poligono T. Se area > 0, T esta
  * listado na ordem CCW */
-double signedArea(const polygon &T)
+double signedArea(polygon T)
 {
 	double area = 0;
 	int n = T.size();
@@ -98,7 +98,7 @@ double signedArea(const polygon &T)
 double poly_area(polygon &T) { return fabs(signedArea(T)); }
 
 /* Retorna a centroide de um poligono T em O(N)*/
-point centroide(polygon &T)
+point centroide(polygon T)
 {
 	int n = T.size();
 	double sgnArea = signedArea(T);
@@ -134,7 +134,7 @@ bool radial_lt(point a, point b)
 		return (R == 1); // 1 se A esta a direita de (pivot->B)
 }
 
-vector<point> convexhull(vector<point> &T, vector<point> &inside)
+vector<point> convexhull(vector<point> T, vector<point> &inside)
 {
 	// Se for necessario remover pontos duplicadados
 	sort(T.begin(), T.end()); // ordena por x e por y
@@ -252,13 +252,19 @@ vector<point> pointsInGeneralPosition(
 	return res;
 }
 
-void printPoints(vector<point> &p, string text = "")
+void printPoints(vector<point> p, bool print_in_ccw, string text = "")
 {
 	if (text.size())
 		cout << text << endl;
+	
 	cout << p.size() << endl;
+
+	if (print_in_ccw == false)
+		reverse(p.begin(), p.end());
+
 	for (size_t i = 0; i < p.size(); i++)
 		cout << p[i].x << " " << p[i].y << endl;
+	
 	if (text.size())
 		cout << "...\n";
 }
@@ -266,7 +272,7 @@ void printPoints(vector<point> &p, string text = "")
 /**
  * @brief Choose a point inside the polygon to be the position of the camera.
  */
-void printPointInConvexPoly(vector<point> &ch, vector<point> &points_inside, string label = "")
+void printPointInConvexPoly(vector<point> ch, vector<point> points_inside, string label = "")
 {
 	point camera;
 	if (points_inside.size() > 0)
@@ -292,6 +298,7 @@ int main(int argc, char *argv[])
 	n = atoi(argv[2]);
 	int max_xy = atoi(argv[3]);
 	string testcase_type = string(argv[4]);
+	bool print_in_ccw = (string(argv[5]) == "ccw");
 
 	p = pointsInGeneralPosition(n, -max_xy, -max_xy, max_xy, max_xy);
 
@@ -302,7 +309,7 @@ int main(int argc, char *argv[])
 	if (testcase_type == "convex")
 	{
 		//printPoints(CH, "Polygon");
-		printPoints(CH, "");
+		printPoints(CH, print_in_ccw, "");
 		printPointInConvexPoly(CH, insideCH, "");
 	}
 	else if (testcase_type == "concave")
@@ -313,7 +320,7 @@ int main(int argc, char *argv[])
 		insideCH.pop_back();
 
 		//printPoints(CH, "Polygon");
-		printPoints(CH, "");
+		printPoints(CH, print_in_ccw, "");
 		printPointInConvexPoly(CH, insideCH, "");
 	}
 }
