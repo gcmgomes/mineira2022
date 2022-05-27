@@ -76,3 +76,8 @@
 5     ; copy attic/manual-75.in
 5     ; copy attic/manual-327491.in
 5     ; copy attic/manual-634398.in
+
+# Manual dami cases
+6     ; copy attic/manual-dami-1.in
+6     ; copy attic/manual-dami-2.in
+6     ; copy attic/manual-dami-3.in
