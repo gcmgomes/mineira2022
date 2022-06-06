@@ -49,4 +49,3 @@
 4     ; copy attic/manual-75.in
 4     ; copy attic/manual-1403.in
 4     ; copy attic/manual-327491.in
-4     ; copy attic/manual-634398.in

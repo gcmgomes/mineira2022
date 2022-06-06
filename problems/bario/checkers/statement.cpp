@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const int MAX_N = 5000000;
+const int MAX_N = 500000;
 
 int main(int argc, char* argv[]) {
   registerValidation(argc, argv);
